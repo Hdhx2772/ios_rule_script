@@ -1,0 +1,16 @@
+*******************************
+
+[rewrite_local]
+
+^http[s]?:\/\/1jietu.com\/apiv2\/user url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/comyjt.js
+
+[mitm] 
+
+hostname = 1jietu.com
+
+*******************************/
+
+var body = $response.body.replace(/vip":"\d"/g,'vip":"1"')
+.replace(/group_id":"\d"/g,'group_id":"3"')
+.replace(/group":".*?"/g,'group":"梧桐已破解"')
+$done({ body });
